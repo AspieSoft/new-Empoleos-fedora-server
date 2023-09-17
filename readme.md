@@ -14,7 +14,15 @@ After booting into the server cli, run one of the following scripts.
 ```shell
 sudo dnf -y install git
 git clone https://github.com/AspieSoft/Empoleos.git
-Empoleos/install.sh
+Empoleos/install.sh gnome
+```
+
+### For Minimal Desktop GUI
+
+```shell
+sudo dnf -y install git
+git clone https://github.com/AspieSoft/Empoleos.git
+Empoleos/install.sh xfce
 ```
 
 ### For Server CLI
@@ -22,5 +30,5 @@ Empoleos/install.sh
 ```shell
 sudo dnf -y install git
 git clone https://github.com/AspieSoft/Empoleos.git
-Empoleos/install.sh --server
+Empoleos/install.sh server
 ```
