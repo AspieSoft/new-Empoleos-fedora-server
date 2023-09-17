@@ -1,6 +1,8 @@
 # Empoleos
 
-## Notice: this script is still in beta. Use at your own risk
+### Notice: this script is still in beta
+
+### Use at your own risk
 
 ## Installation
 
