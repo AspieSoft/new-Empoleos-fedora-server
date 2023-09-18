@@ -35,16 +35,25 @@ fi
 
 if [ "$1" = "server" -o "$1" = "s" ]; then
   InstallType="server"
+elif [ "$1" = "cli" -o "$1" = "c" ]; then
+  InstallType="server"
 elif [ "$1" = "gnome" -o "$1" = "desktop" -o "$1" = "g" -o "$1" = "d" ]; then
   InstallType="gnome"
 elif [ "$1" = "xfce" -o "$1" = "min-desktop" -o "$1" = "min" -o "$1" = "x" -o "$1" = "m" ]; then
   InstallType="xfce"
 else
+  echo
   echo "./install.sh [server|desktop type]"
   echo
   echo "server: server | s"
+  echo
   echo "desktop (gnome): gnome | disktop | g | d"
   echo "desktop (xfce): xfce | min-desktop | min | x | m"
+  echo
+  echo "cli: cli | c"
+  echo 'Note: The CLI mode will install common desktop gui apps, but will not instal a desktop environment.'
+  echo '      For a CLI install, installing the desktop environment is left for you to handle yourself.'
+  echo '      You may also have to install some important apps, like the terminal app that pairs with the desktop environment of your choice.'
   echo
   exit
 fi
