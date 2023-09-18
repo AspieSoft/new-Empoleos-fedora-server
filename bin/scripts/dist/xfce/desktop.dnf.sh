@@ -16,5 +16,7 @@ sudo dnf -y install xfce4-panel xfce4-session xfce4-settings xfconf xfdesktop xf
 sudo dnf -y install @multimedia
 sudo dnf -y install @networkmanager-submodules
 
+sudo dnf -y install xfce4-terminal
+
 # fix compatability
 sudo dnf -y install plasma-framework
