@@ -15,3 +15,6 @@ sudo dnf -y install xorg-x11-server-Xorg xorg-x11-xinit xorg-x11-drv-libinput me
 sudo dnf -y install xfce4-panel xfce4-session xfce4-settings xfconf xfdesktop xfwm4
 sudo dnf -y install @multimedia
 sudo dnf -y install @networkmanager-submodules
+
+# fix compatability
+sudo dnf -y install plasma-framework
