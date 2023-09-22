@@ -1,6 +1,7 @@
 #!/bin/bash
 
 dir="$1"
+InstallType="$2"
 
 # install preload
 dnf -y copr enable elxreno/preload
@@ -24,3 +25,7 @@ systemctl disable nfs-client.target
 systemctl disable remote-fs.target
 
 dnf -y --noautoremove remove dmraid device-mapper-multipath
+
+if [ "$InstallType" = "server" ]; then
+  systemctl disable cups
+fi

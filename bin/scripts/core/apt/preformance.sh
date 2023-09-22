@@ -1,6 +1,7 @@
 #!/bin/bash
 
 dir="$1"
+InstallType="$2"
 
 # install preload
 sudo apt -y install preload
@@ -27,3 +28,7 @@ sudo systemctl disable pppd-dns.service
 sudo systemctl disable remote-fs.target
 
 sudo apt -y remove dmraid
+
+if [ "$InstallType" = "server" ]; then
+  systemctl disable cups
+fi

@@ -13,7 +13,12 @@ sudo apt -y install btrfs-progs lvm2 xfsprogs udftools
 sudo apt -y install p7zip
 
 # install printer software
-sudo apt -y install hplip hplip-gui
+if [ "$InstallType" != "server" ]; then
+  sudo apt -y install cups
+  sudo systemctl enable cups --now
+
+  sudo apt -y install hplip hplip-gui
+fi
 
 # install inotify-tools
 sudo apt -y install inotify-tools

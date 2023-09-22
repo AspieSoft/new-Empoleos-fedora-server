@@ -1,6 +1,7 @@
 #!/bin/bash
 
 dir="$1"
+InstallType="$2"
 
 # install common packages
 sudo dnf -y install nano
@@ -13,7 +14,12 @@ sudo dnf -y install btrfs-progs lvm2 xfsprogs udftools
 sudo dnf -y install p7zip p7zip-plugins
 
 # install printer software
-sudo dnf -y install hplip hplip-gui
+if [ "$InstallType" != "server" ]; then
+  sudo dnf -y install cups
+  sudo systemctl enable cups --now
+
+  sudo dnf -y install hplip hplip-gui
+fi
 
 # install inotify-tools
 sudo dnf -y install inotify-tools

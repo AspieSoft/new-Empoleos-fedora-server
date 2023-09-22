@@ -34,8 +34,8 @@ if ! [ -f "/etc/profile.d/empoleos.sh" ]; then
 fi
 
 # run install scripts
-source "$dir/bin/scripts/core/preformance.sh" "$dir" "$PackageManager"
-source "$dir/bin/scripts/core/$PackageManager/fix.sh" "$dir"
+source "$dir/bin/scripts/core/preformance.sh" "$dir" "$PackageManager" "$InstallType"
+source "$dir/bin/scripts/core/$PackageManager/fix.sh" "$dir" "$InstallType"
 source "$dir/bin/scripts/core/$PackageManager/langs.sh" "$dir"
 source "$dir/bin/scripts/core/$PackageManager/security.sh" "$dir"
 
