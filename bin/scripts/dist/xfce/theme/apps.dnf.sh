@@ -34,3 +34,9 @@ sudo dnf -y install jgmenu-xfce4
 sudo dnf -y install gtk-xfce-engine
 
 sudo dnf -y install f38-backgrounds-xfce
+
+
+sudo dnf -y install xfce4-volumed
+sudo dnf -y install xfce4-vala
+
+sudo dnf -y install xfdashboard # gnome like dashboard
