@@ -19,3 +19,9 @@ sudo dnf -y install adwaita-icon-theme
 
 # fix compatability
 sudo dnf -y install plasma-framework
+
+
+# sudo dnf -y install libgnome gnome-common
+# sudo dnf -y install gnome-chess
+# sudo dnf -y install f38-backgrounds-gnome
+# sudo dnf -y install GtkAda-gnome

@@ -9,6 +9,10 @@ sudo dnf -y install gdm
 sudo dnf -y install wayland-devel
 sudo dnf -y install wayland-utils
 
+#todo: consider trying x11 in place of wayland for gnome desktop
+# xorg-x11-server-Xorg xorg-x11-drv-{evdev,intel,libinput} xorg-x11-xinit rxvt-unicode terminus-fonts
+
+
 # install xfce
 sudo dnf -y install @base-x
 sudo dnf -y install xorg-x11-server-Xorg xorg-x11-xinit xorg-x11-drv-libinput mesa-dri-drivers
